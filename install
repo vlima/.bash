@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Get this file directory 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+if [ ! -h $HOME/.vimrc ]; then
+  ln -s $DIR/vim/.vimrc $HOME/.vimrc
+fi
